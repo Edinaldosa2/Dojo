@@ -8,7 +8,13 @@
   <ItemGroup>
     <PackageReference Include="Bogus" Version="26.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DojoDDD.Domain\Models\Clientes\Servico\Interface\" />
+    <Folder Include="DojoDDD.Domain\Models\Produtos\Servico\" />
   </ItemGroup>
 
 </Project>

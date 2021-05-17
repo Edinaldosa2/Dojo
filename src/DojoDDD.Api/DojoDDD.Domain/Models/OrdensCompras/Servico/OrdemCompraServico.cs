@@ -1,7 +1,9 @@
-﻿using System;
+﻿using DojoDDD.Api.DojoDDD.Domain.Models.Clientes;
+using System;
 using System.Threading.Tasks;
 
 namespace DojoDDD.Api.DojoDDD.Domain
+// Melhor prática seria trocar o namespace para ser o caminho correto.
 {
     public class OrdemCompraServico : IOrdemCompraServico
     {
@@ -64,11 +66,23 @@ namespace DojoDDD.Api.DojoDDD.Domain
             }
             catch (Exception ex)
             {
-                return false;
-                throw;
+                // Criaria um log para saber o erro, adicionando a variavel LogErro
+                string LogErro = ex.Message;       
+        
             }
 
             return true;
+        }
+
+        public Task<string> ConsultarPorId(string id)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                return null;
+
+            }
+
+            return _ordemCompraRepositorio.ConsultarPorId(id);
         }
     }
 }

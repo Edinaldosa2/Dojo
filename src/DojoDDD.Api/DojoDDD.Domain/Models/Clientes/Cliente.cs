@@ -1,4 +1,6 @@
-﻿namespace DojoDDD.Api.DojoDDD.Domain
+﻿namespace DojoDDD.Api.DojoDDD.Domain.Models.Clientes
+// Alterando o caminho para DojoDDD.Api.DojoDDD.Domain.Models.Clientes
+
 {
     public class Cliente
     {

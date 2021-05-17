@@ -1,5 +1,6 @@
 ﻿using Bogus;
 using DojoDDD.Api.DojoDDD.Domain;
+using DojoDDD.Api.DojoDDD.Domain.Models.Clientes;
 using System.Collections.Generic;
 using System.Linq;
 

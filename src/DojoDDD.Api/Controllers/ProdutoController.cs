@@ -1,4 +1,5 @@
 ﻿using DojoDDD.Api.DojoDDD.Domain;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -18,6 +19,8 @@ namespace DojoDDD.Api.Controllers
 
         [HttpGet]
         [Route("")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Get()
         {
             try
@@ -36,6 +39,8 @@ namespace DojoDDD.Api.Controllers
 
         [HttpGet]
         [Route("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> GetById([FromRoute] string id)
         {
             try
